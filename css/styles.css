@@ -1,0 +1,136 @@
+@import url('bootstrap.css');
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+.sprite {background: url('../imgs/sprite.png') no-repeat top left; }
+
+
+/* =============== */
+/* ! Fonts, etc.   */
+/* =============== */
+h1, h2 {font: 200 3em/1em "open sans"; font-family: 'Satisfy', serif; }
+h2 {text-align: center; font-size: 6em; color: rgb(76, 89, 96); text-transform:lowercase; margin-bottom: 25px; }
+h3 {font-size:2em; font-weight:normal; }
+h3 a {color:#333;}
+h3 + .photo-wrap {margin-bottom: 3em; }
+h4 {margin-top: 2em; }
+p, cite, ul, time {font-family: 'PT Serif', serif; font-size: 19px; line-height: 1.5em; }
+p, time {margin: 1em 0 2em; }
+time {font-weight: bold; }
+
+
+/* ============================== */
+/* ! Helpers and grid overrides   */
+/* ============================== */
+.container-fluid {padding:0;margin-top: 10em;}
+
+section {margin-bottom:-9px;}
+section > .row {padding: 4em 0;background:url('../imgs/stars_border.png') repeat-x bottom;position:relative;}
+section:last-child > .row {background:0;margin-bottom:-10em;}
+
+.invite .row {padding:7em 0 6em;}
+.span12 {float:none;margin:0 auto;padding-left:20px;}
+
+
+/* ================== */ 
+/* ! General Layout   */
+/* ================== */
+header {position: fixed; width: 100%; top: -10px; z-index: 1; } 
+
+.logo {height: 130px; background: #FFFEF5 url('../imgs/stars_repeat.png') repeat center; }
+.logo h1 {background: #FFFEF5 url('../imgs/sprite.png') 0 -647px; width: 98px; height: 101px; text-indent: -9999px; border-radius: 50%; margin: 0 auto; position: relative; top: 2em; box-shadow: 0 3px 6px #4C5960; }
+.logo h1 a {display: block; width:97px; height:100px; }
+
+nav {text-align: center; background-color: rgb(76, 89, 96); padding: .75em; }
+nav li {display: inline-block; margin: 0 .65em; }
+nav li a {color:#FFF; text-transform: lowercase; font-family: 'Open Sans', sans-serif; background: url('../imgs/sprite.png') no-repeat 0 -489px; padding: 1em 0 1em 2em; font-size: 1.25em; }
+nav li:nth-child(4) {margin-right:10em; }
+nav li a:hover {color:#FFFEF5; }
+nav li.active a {text-decoration:underline; background: url('../imgs/sprite.png') no-repeat 0 -557px; }
+nav li a i {display:inline-block; width:16px; height:16px; text-indent: -9999px; background: url('../imgs/sprite.png') no-repeat 0 -445px; text-shadow: 1px 1px 0 white, 0px -1px 4px rgba(0, 0, 0, 1); }
+
+section.invite {text-align:center;}
+section:nth-child(odd) {background-color: rgb(255, 254, 245);}
+section:nth-child(odd) h2 {color:rgb(112, 129, 137);}
+section:nth-child(even) {background-color: rgb(149, 184, 199);}
+section:nth-child(even) h2 {color:rgb(255, 244, 245);}
+/*section:nth-child(even) a {color:rgb(7, 109, 160);}*/
+
+.photo-wrap {position:relative; width: 620px; }
+.photo-wrap img {position: relative; padding: 6px; }
+.photo-wrap img + img {margin-left:4px;}
+.photo-wrap span.corner {position:absolute; top:0; left:0; display:block; width:620px; height:468px; background-image: url('../imgs/corner_lb.png'), url('../imgs/corner_lt.png'), url('../imgs/corner_rt.png'), url('../imgs/corner_rb.png'); background-repeat: no-repeat; background-position: left bottom, left top, right top, right bottom; }
+
+
+/* ====================== */ 
+/* ! Carousel Overrides   */
+/* ====================== */
+.carousel-inner, .carousel-inner > .item {height:516px; }
+.carousel-control {top:45%;}
+.carousel-caption {background:none;padding:10px;text-align:center;position:static;}
+.carousel-caption h4 {color:rgba(0, 0, 0, 0.35);font-family: 'Satisfy', serif;font-size: 2em;}
+
+
+/* ========== */ 
+/* ! Footer   */
+/* ========== */
+footer {height: 644px; background:rgb(255, 254, 245) url('../imgs/bk-bridge.svg') no-repeat 0 0; background-size: 100%;}
+footer div {position: relative;z-index: -1;width:100%;height:100%;text-align: right;}
+footer div p {position: absolute;bottom:0;right:3em;}
+
+
+/* ============ */ 
+/* ! Utilties   */
+/* ============ */
+.c {text-align: center;}
+.hide {display:none;}
+
+.lazy-load, .lazy-loaded {-webkit-transition: opacity 0.3s;-moz-transition: opacity 0.3s;-ms-transition: opacity 0.3s;-o-transition: opacity 0.3s;transition: opacity 0.3s;opacity: 0;}
+.lazy-loaded { opacity: 1; }
+
+
+/* ================= */ 
+/* ! Media Queries   */
+/* ================= */
+
+@media (min-width: 768px) and (max-width: 979px) {
+	nav li {margin:0 .25em;}
+	nav li:nth-child(4) {margin-right:8em;}
+	nav li a {padding:1em 0 1em 1.5em;}
+}
+
+@media (max-width: 767px) {
+	nav li {margin:0 .25em;}
+	nav li:nth-child(4) {margin-right:0;}
+	nav li a {padding:1em 0 1em 1.5em;}
+}
+
+@media (max-width: 480px) {
+  body {padding: 0;font-size: 80%;}
+  p, cite, ul, time {font-size:17px;}
+  .logo{height:0;background:none;}
+  .logo h1 {display:none;}
+  p, time {margin-bottom: 1em;}
+  h2 {font-size:3em;margin-bottom:.5em;}
+  .container-fluid {margin-top:1em;}
+  nav {padding:1.5em 1em 1em;}
+  nav li:nth-child(4) {margin-right:auto;}
+  nav li a {padding:0 0 0 1.25em;background: url('../imgs/sprite.png') no-repeat 0 -507px;}
+  nav li.active a {background-position:0 -575px;}
+  section > .row {padding:1em;}
+  [class*="span"] {
+  	width: auto;
+    padding:0;
+  }
+  #wedding_events .span3 {text-align: center;}
+  #we_love_brooklyn img {margin-top:2em;}
+  footer {height:auto;background:none;}
+  footer div {display:none;}
+  .photo-wrap span.corner {display:none;}
+  .photo-wrap {width:auto;}
+  .carousel-inner, 
+  .carousel-inner > .item {height:305px;}
+  .carousel-caption h4 {font-size: 1.5em;}
+}
+
